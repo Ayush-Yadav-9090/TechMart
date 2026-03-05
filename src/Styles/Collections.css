@@ -1,0 +1,335 @@
+/* ==============================
+   Page Base
+================================ */
+.collections-page {
+  background: #0f172a;
+  color: #e5e7eb;
+  min-height: 100vh;
+  padding: 30px 20px;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* ==============================
+   Header
+================================ */
+.collections-header {
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.collections-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.collections-header p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Controls */
+.collections-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.collections-controls select {
+  background: #020617;
+  color: white;
+  border: 1px solid #1f2937;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.collections-controls button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.collections-controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 14px rgba(56,189,248,0.5);
+}
+
+/* ==============================
+   Layout
+================================ */
+.collections-content {
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 25px;
+}
+
+/* ==============================
+   Filters Sidebar
+================================ */
+.filters-sidebar {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 20px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar Header */
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Filter Sections */
+.filter-section {
+  margin-bottom: 22px;
+}
+
+.filter-section h4 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Category buttons */
+.filter-section button {
+  width: 100%;
+  background: #020617;
+  border: 1px solid #1f2937;
+  color: #e5e7eb;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.filter-section button:hover {
+  border-color: #38bdf8;
+  background: #020617;
+}
+
+.filter-section button.active {
+  border-color: #22c55e;
+  background: rgba(34,197,94,0.15);
+}
+
+/* Brand checkboxes */
+.filter-section label {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #cbd5f1;
+}
+
+/* Range slider */
+.filter-section input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Clear button */
+.filters-sidebar > button {
+  width: 100%;
+  margin-top: 10px;
+  background: #1f2937;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filters-sidebar > button:hover {
+  background: #ef4444;
+}
+
+/* Close icon button */
+.close-filters-btn {
+  background: none !important;
+  border: none !important;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+/* ==============================
+   Products Grid
+================================ */
+.products-container {
+  min-height: 400px;
+}
+
+/* .products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+  transition: all 0.3s ease;
+} */
+
+/* Products Grid */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* default 4 columns for large screens */
+  gap: 22px;
+  transition: all 0.3s ease;
+}
+
+/* No Products State */
+.no-products {
+  text-align: center;
+  padding: 60px 20px;
+  background: #020617;
+  border-radius: 16px;
+  border: 1px solid #1f2937;
+}
+
+.no-products p {
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.no-products button {
+  background: #38bdf8;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Error */
+.error-message {
+  color: #f87171;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ==============================
+   Tablet
+================================ */
+@media (max-width: 1024px) {
+  .collections-content {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    z-index: 1000;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .filters-sidebar.show {
+    left: 0;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 18px;
+  }
+}
+
+/* ==============================
+   Mobile
+================================ */
+@media (max-width: 768px) {
+  .collections-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .collections-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .collections-controls select {
+    flex: 1;
+  }
+
+ .products-grid {
+    grid-template-columns: 1fr; /* 1 product per row */
+    gap: 16px;
+  }
+}
+
+/* ==============================
+   Small Mobile
+================================ */
+@media (max-width: 480px) {
+ .products-grid {
+    grid-template-columns: 1fr; /* still 1 product per row */
+    gap: 12px;
+  }
+
+  .collections-page {
+    padding: 20px 12px;
+  }
+
+  .collections-header h1 {
+    font-size: 22px;
+  }
+
+  .collections-header p {
+    font-size: 12px;
+  }
+
+  .filter-section h4 {
+    font-size: 14px;
+  }
+}
+
+/* ==============================
+   Extra Small Phones
+================================ */
+@media (max-width: 360px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .collections-controls select,
+  .collections-controls button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .filters-sidebar {
+    width: 100%;
+  }
+}

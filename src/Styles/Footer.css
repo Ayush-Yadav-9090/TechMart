@@ -1,0 +1,186 @@
+/* ============================
+   Footer Base
+============================ */
+.footer {
+  background: #020617;
+  color: #e5e7eb;
+  border-top: 1px solid rgba(0, 255, 255, 0.15);
+  margin-top: 60px;
+}
+
+/* ============================
+   Footer Container
+============================ */
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* ============================
+   Footer Sections
+============================ */
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #22d3ee;
+}
+
+.footer-logo-icon {
+  font-size: 24px;
+}
+
+/* ============================
+   Text & Headings
+============================ */
+.footer-description {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+/* ============================
+   Footer Links
+============================ */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #22d3ee;
+}
+
+/* ============================
+   Social Media Links
+============================ */
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-link {
+  color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  color: #22d3ee;
+  background: rgba(34, 211, 238, 0.2);
+}
+
+/* ============================
+   Contact Info
+============================ */
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+/* ============================
+   Footer Bottom Bar
+============================ */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px 20px;
+  background: #020617;
+}
+
+.footer-bottom-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ============================
+   Legal Links
+============================ */
+.footer-legal {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-legal a {
+  font-size: 13px;
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: #22d3ee;
+}
+
+/* ============================
+   Responsive Design
+============================ */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .footer-bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}

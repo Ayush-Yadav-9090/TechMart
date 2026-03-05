@@ -1,0 +1,175 @@
+/* =========================
+   Admin Layout Base
+========================= */
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #020617;
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* =========================
+   Sidebar
+========================= */
+.admin-sidebar {
+  width: 240px;
+  background-color: #111;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.admin-sidebar h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #22d3ee;
+  margin-bottom: 8px;
+}
+
+.admin-sidebar p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   Navigation Links
+========================= */
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-nav a {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.admin-nav a:hover {
+  background-color: #1e293b;
+}
+
+.admin-nav a.active {
+  color: #00eaff;
+  font-weight: bold;
+}
+
+/* =========================
+   Logout Button
+========================= */
+.admin-logout {
+  margin-top: auto;
+  padding: 10px;
+  background: crimson;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-logout:hover {
+  background-color: #b91c1c;
+}
+
+/* =========================
+   Main Content
+========================= */
+.admin-content {
+  flex: 1;
+  padding: 24px;
+  background-color: #020617;
+  overflow-y: auto;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .admin-sidebar {
+    width: 200px;
+    padding: 16px;
+  }
+
+  .admin-sidebar h2 {
+    font-size: 18px;
+  }
+
+  .admin-nav a {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .admin-content {
+    padding: 20px;
+  }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 768px) {
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    border-bottom: 1px solid #1e293b;
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  .admin-sidebar h2 {
+    display: none; /* hide title on small screens */
+  }
+
+  .admin-nav {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .admin-nav a {
+    flex: 0 0 auto;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .admin-logout {
+    margin-top: 0;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  .admin-content {
+    padding: 16px;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .admin-sidebar {
+    padding: 6px 4px;
+    gap: 4px;
+  }
+
+  .admin-nav a {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .admin-content {
+    padding: 12px;
+  }
+}

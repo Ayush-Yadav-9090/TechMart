@@ -1,0 +1,259 @@
+/* ===============================
+   PAGE WRAPPER (Scoped)
+================================ */
+.ai-recommendations-page {
+  background: #0f172a;
+  color: #e5e7eb;
+  padding-bottom: 60px;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.ai-header {
+  background: radial-gradient(circle at top, #020617, #0f172a);
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.ai-header-content {
+  max-width: 900px;
+  margin: auto;
+}
+
+.ai-icon-large {
+  color: #22d3ee;
+  margin-bottom: 16px;
+}
+
+.ai-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.ai-subtitle {
+  font-size: 16px;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+/* ===============================
+   FEATURES
+================================ */
+.ai-features {
+  max-width: 1300px;
+  margin: -40px auto 40px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.ai-feature-card {
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.ai-feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-icon-small {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.ai-feature-card h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.ai-feature-card p {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* ===============================
+   TABS (FIXED FOR YOUR JSX)
+================================ */
+.ai-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 40px 0 20px;
+  padding: 0 10px;
+}
+
+.ai-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #020617;
+  color: #9ca3af;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+
+.ai-tabs button:hover {
+  color: #22d3ee;
+  border-color: #22d3ee;
+}
+
+.ai-tabs button.active {
+  background: #22d3ee;
+  color: #020617;
+  font-weight: 600;
+}
+
+/* ===============================
+   PRODUCTS GRID
+================================ */
+.ai-recommendations-page .products-grid {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* Make ProductCard responsive inside AI page */
+.ai-recommendations-page .products-grid .product-card {
+  width: 100%;
+  height: 100%;
+}
+
+/* Fix product image ratio */
+.ai-recommendations-page .products-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ===============================
+   LOADING
+================================ */
+.ai-loading {
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* ===============================
+   HOW IT WORKS
+================================ */
+.how-it-works {
+  max-width: 1100px;
+  margin: 80px auto 0;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.process-step {
+  background: #020617;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #22d3ee;
+  color: #020617;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (max-width: 1024px) {
+  .ai-features,
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ai-title {
+    font-size: 30px;
+  }
+}
+
+/* ===============================
+   MOBILE
+================================ */
+@media (max-width: 640px) {
+  .ai-header {
+    padding: 60px 15px 40px;
+  }
+
+  .ai-title {
+    font-size: 26px;
+  }
+
+  .ai-subtitle {
+    font-size: 14px;
+  }
+
+  .ai-features,
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-tabs {
+    gap: 8px;
+  }
+
+  .ai-tabs button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .ai-recommendations-page .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .ai-recommendations-page .products-grid img {
+    height: 160px;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+@media (max-width: 420px) {
+  .ai-recommendations-page .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-recommendations-page .products-grid img {
+    height: 180px;
+  }
+}

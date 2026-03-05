@@ -1,0 +1,157 @@
+/* ============================
+   Admin Pages Base
+============================ */
+.admin-content h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #22d3ee;
+  margin-bottom: 16px;
+}
+
+
+.admin-content h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #e5e7eb;
+}
+
+.admin-content p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+/* ============================
+   Tables (Products)
+============================ */
+.admin-content table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1e293b;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.admin-content th,
+.admin-content td {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.admin-content th {
+  background-color: #0f172a;
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+.admin-content td {
+  color: #e5e7eb;
+  border-bottom: 1px solid #334155;
+}
+
+.admin-content tr:hover td {
+  background-color: #334155;
+  transition: background 0.2s ease;
+}
+
+/* ============================
+   Orders List
+============================ */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-item {
+  background: #1e293b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.order-item span.status {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background-color: #facc15;
+  color: #020617;
+}
+
+.status.completed {
+  background-color: #22c55e;
+  color: #020617;
+}
+
+.status.cancelled {
+  background-color: #ef4444;
+  color: #fff;
+}
+
+/* ============================
+   Users List
+============================ */
+.users-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background: #0f172a;
+  min-height: 100%;
+  color: #e5e7eb;
+  border-radius: 12px;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: #1e293b;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.user-item:hover {
+  background: #111827;
+}
+
+.role.admin {
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+.role.customer {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 768px) {
+  .admin-content table,
+  .admin-content th,
+  .admin-content td {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .order-item,
+  .user-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

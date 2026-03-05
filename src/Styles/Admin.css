@@ -1,0 +1,303 @@
+/* ===================== ADMIN WRAPPER ===================== */
+.admin-table,
+.admin-products {
+  padding: 24px;
+  background-color: #1f2937; /* dark gray background */
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #f3f4f6; /* light text */
+}
+
+.admin-table h2,
+.admin-products h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #f3f4f6;
+}
+
+/* ===================== ADD PRODUCT FORM ===================== */
+.add-product-form {
+  background: #374151; /* dark card background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.add-product-form input,
+.add-product-form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #6b7280;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  background-color: #4b5563;
+  color: #f3f4f6;
+}
+
+.add-product-form textarea {
+  resize: vertical;
+  min-height: 90px;
+  grid-column: 1 / -1;
+}
+
+.add-product-form input:focus,
+.add-product-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+.add-product-form label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e5e7eb;
+  grid-column: 1 / -1;
+}
+
+.add-product-form button {
+  grid-column: 1 / -1;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #111827;
+  color: #f3f4f6;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-product-form button:hover {
+  background-color: #1f2933;
+}
+
+.add-product-form .error {
+  grid-column: 1 / -1;
+  color: #f87171;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===================== TABLE STYLING ===================== */
+.admin-table table,
+.admin-products table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #374151; /* dark table background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  table-layout: auto;
+}
+
+.admin-table thead,
+.admin-products thead {
+  background-color: #111827; /* dark header */
+}
+
+.admin-table th,
+.admin-products th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f3f4f6;
+  letter-spacing: 0.5px;
+}
+
+.admin-table td,
+.admin-products td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #e5e7eb;
+  border-bottom: 1px solid #6b7280;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.admin-table tbody tr:last-child td,
+.admin-products tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tbody tr:hover,
+.admin-products tbody tr:hover {
+  background-color: #4b5563;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* ===================== IMAGE STYLING (Products) ===================== */
+.admin-products img {
+  border-radius: 6px;
+  border: 1px solid #6b7280;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* ===================== ACTION BUTTON (Products) ===================== */
+.admin-products td button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #dc2626;
+  color: #f3f4f6;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-products td button:hover {
+  background-color: #b91c1c;
+}
+
+/* ===================== STATUS BADGES (Orders & Staff) ===================== */
+.admin-table td:nth-child(4) {
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  color: #f3f4f6;
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.admin-table td:nth-child(4):contains("Yes") {
+  background-color: #16a34a; /* Staff Yes */
+}
+
+.admin-table td:nth-child(4):contains("No") {
+  background-color: #dc2626; /* Staff No */
+}
+
+.admin-table td:nth-child(4):contains("pending") {
+  background-color: #f59e0b; /* Orders Pending */
+}
+
+.admin-table td:nth-child(4):contains("completed") {
+  background-color: #16a34a; /* Orders Completed */
+}
+
+.admin-table td:nth-child(4):contains("canceled") {
+  background-color: #dc2626; /* Orders Canceled */
+}
+
+/* ===================== EMPTY / LOADING STATES ===================== */
+.admin-table td[colspan],
+.admin-products td[colspan],
+.admin-table p,
+.admin-products p {
+  color: #9ca3af;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablets and below: horizontal scroll for tables */
+@media (max-width: 1024px) {
+  .admin-table th,
+  .admin-table td,
+  .admin-products th,
+  .admin-products td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .admin-table h2,
+  .admin-products h1 {
+    font-size: 20px;
+  }
+
+  .admin-table table,
+  .admin-products table {
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile: stack table as cards */
+@media (max-width: 768px) {
+  .add-product-form {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-table table,
+  .admin-products table,
+  .admin-table thead,
+  .admin-products thead,
+  .admin-table tr,
+  .admin-products tr,
+  .admin-table th,
+  .admin-table td,
+  .admin-products th,
+  .admin-products td {
+    display: block;
+  }
+
+  .admin-table thead,
+  .admin-products thead {
+    display: none;
+  }
+
+  .admin-table tr,
+  .admin-products tr {
+    margin-bottom: 16px;
+    background: #020617;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .admin-table td,
+  .admin-products td {
+    padding-left: 50%;
+    position: relative;
+    text-align: left;
+  }
+
+  .admin-table td::before,
+  .admin-products td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .admin-table h2,
+  .admin-products h1 {
+    font-size: 18px;
+  }
+
+  .admin-table td::before,
+  .admin-products td::before {
+    left: 8px;
+    top: 8px;
+    font-size: 11px;
+  }
+
+  .add-product-form {
+    padding: 12px;
+  }
+}
+
+/* Ultra wide screens */
+@media (min-width: 1600px) {
+  .admin-table,
+  .admin-products {
+    padding: 40px 60px;
+  }
+}

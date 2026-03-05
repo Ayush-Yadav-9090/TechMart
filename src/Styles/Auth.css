@@ -1,0 +1,227 @@
+/* =====================================
+   Auth Page Base
+===================================== */
+.auth-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(34, 211, 238, 0.12), transparent 40%),
+              #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* =====================================
+   Container
+===================================== */
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  background: #020617;
+  border-radius: 26px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* =====================================
+   Header
+===================================== */
+.auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.auth-header p {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* =====================================
+   Form
+===================================== */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Error Message */
+.error-message {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* =====================================
+   Inputs
+===================================== */
+.form-group label {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 12px 44px 12px 42px;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input-wrapper input:focus {
+  border-color: #22d3ee;
+}
+
+/* Icons */
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+}
+
+/* Password Toggle */
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+}
+
+/* =====================================
+   Options
+===================================== */
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+}
+
+.checkbox-label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.forgot-link {
+  color: #22d3ee;
+  text-decoration: none;
+}
+
+/* =====================================
+   Submit Button
+===================================== */
+.submit-button {
+  margin-top: 8px;
+  background: #22d3ee;
+  color: #020617;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =====================================
+   Footer
+===================================== */
+.auth-footer {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.auth-link {
+  color: #22d3ee;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* =====================================
+   Social Login
+===================================== */
+.social-login {
+  margin-top: 26px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+  margin: 0 12px;
+}
+
+/* Social Buttons */
+.social-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-button {
+  flex: 1;
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.social-button img {
+  width: 18px;
+  height: 18px;
+}
+
+/* =====================================
+   Responsive
+===================================== */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,244 @@
+/* =====================================
+   Contact Page Base
+===================================== */
+.contact-page {
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e5e7eb;
+  padding: 60px 20px 100px;
+}
+
+/* =====================================
+   Header
+===================================== */
+.contact-header {
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-header p {
+  color: #9ca3af;
+  max-width: 650px;
+  margin: auto;
+}
+
+/* =====================================
+   Content Layout
+===================================== */
+.contact-content {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+}
+
+/* =====================================
+   Form Section
+===================================== */
+.contact-form-section {
+  background: #020617;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-form-section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* Success Message */
+.success-message {
+  background: rgba(34, 211, 238, 0.15);
+  color: #22d3ee;
+  padding: 12px 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* =====================================
+   Form Elements
+===================================== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.form-group input,
+.form-group textarea {
+  background: #020617;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #22d3ee;
+}
+
+/* =====================================
+   Submit Button
+===================================== */
+.submit-btn {
+  margin-top: 10px;
+  background: #22d3ee;
+  color: #020617;
+  border: none;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =====================================
+   Contact Info Section
+===================================== */
+.contact-info-section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.info-card {
+  background: #020617;
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.info-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(34, 211, 238, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #22d3ee;
+  margin-bottom: 12px;
+}
+
+.info-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.info-card p {
+  font-size: 14px;
+}
+
+.info-card .secondary {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* =====================================
+   Map
+===================================== */
+.map-container {
+  margin-top: 24px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* =====================================
+   FAQ Section
+===================================== */
+.faq-section {
+  max-width: 1200px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.faq-section h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.faq-item {
+  background: #020617;
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: left;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.faq-item p {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* =====================================
+   Responsive
+===================================== */
+@media (max-width: 1024px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-header h1 {
+    font-size: 28px;
+  }
+}

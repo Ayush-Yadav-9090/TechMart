@@ -1,0 +1,160 @@
+/* =========================
+   ADMIN REVIEWS PAGE
+========================= */
+
+.admin-table {
+  background: #0f172a;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+  border: 1px solid #1f2937;
+  color: #e5e7eb;
+}
+
+.admin-table h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+/* =========================
+   TABLE BASE
+========================= */
+
+.admin-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #020617;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.admin-table thead {
+  background: linear-gradient(90deg, #1e293b, #0f172a);
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 14px 12px;
+  font-size: 13px;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+  color: #cbd5f1;
+  border-bottom: 1px solid #1f2937;
+}
+
+.admin-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #111827;
+  font-size: 14px;
+  color: #e5e7eb;
+  vertical-align: top;
+}
+
+/* =========================
+   ROW EFFECTS
+========================= */
+
+.admin-table tbody tr {
+  transition: 0.2s;
+}
+
+.admin-table tbody tr:hover {
+  background: #020617;
+  transform: scale(1.002);
+}
+
+/* =========================
+   SPECIAL COLUMNS
+========================= */
+
+/* rating */
+.admin-table td:nth-child(5) {
+  font-weight: 600;
+  color: #facc15;
+}
+
+/* title */
+.admin-table td:nth-child(6) {
+  font-weight: 600;
+  color: #c7d2fe;
+}
+
+/* feedback text — make readable */
+.admin-table td:nth-child(7) {
+  max-width: 360px;
+  line-height: 1.5;
+  color: #cbd5f1;
+  word-break: break-word;
+}
+
+/* date */
+.admin-table td:nth-child(8) {
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* =========================
+   USER BADGE
+========================= */
+
+.admin-table td:nth-child(2) {
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+/* =========================
+   LOADING / ERROR TEXT
+========================= */
+
+.admin-table p {
+  padding: 20px 0;
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .admin-table {
+    padding: 14px;
+  }
+
+  .admin-table table,
+  .admin-table thead,
+  .admin-table tbody,
+  .admin-table th,
+  .admin-table td,
+  .admin-table tr {
+    display: block;
+  }
+
+  .admin-table thead {
+    display: none;
+  }
+
+  .admin-table tr {
+    margin-bottom: 14px;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    padding: 12px;
+    background: #020617;
+  }
+
+  .admin-table td {
+    border: none;
+    padding: 6px 0;
+  }
+
+  .admin-table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #94a3b8;
+    display: block;
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+}

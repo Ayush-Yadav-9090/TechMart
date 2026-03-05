@@ -1,0 +1,402 @@
+/* ============================
+   Navbar Base
+============================ */
+.navbar {
+  width: 100%;
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 255, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 9999; /* FIX: ensures navbar always visible */
+}
+
+.navbar-container {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0 20px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ============================
+   Logo
+============================ */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 22px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #22d3ee;
+}
+
+/* ============================
+   Navigation Links
+============================ */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-item {
+  display: flex;
+}
+
+.nav-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(34, 211, 238, 0.15);
+  color: #22d3ee;
+}
+
+.ai-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #22d3ee;
+}
+
+
+/* ============================
+   Search Bar
+============================ */
+.navbar-search {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  background: #020617;
+  overflow: hidden;
+}
+
+.navbar-search input {
+  height: 100%;
+  width: 190px;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #e5e7eb;
+  font-size: 14px;
+}
+
+.navbar-search input::placeholder {
+  color: #94a3b8;
+}
+
+.navbar-search button {
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #22d3ee;
+  padding: 0 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search button:hover {
+  background: rgba(34, 211, 238, 0.12);
+}
+
+
+/* ============================
+   Icons Section
+============================ */
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+.icon-button svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.8;
+}
+
+
+/* ============================
+   Cart Icon
+============================ */
+.cart-wrapper button {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  cursor: pointer;
+  position: relative;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-wrapper button:hover {
+  color: #22d3ee;
+}
+
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -6px;
+  font-size: 10px;
+  font-weight: 700;
+  background: #ef4444;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+
+/* ============================
+   Cart Dropdown
+============================ */
+.cart-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 300px;
+  background: #020617;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+  z-index: 9999;
+}
+
+.cart-item-mini {
+  display: flex;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cart-item-mini:last-child {
+  border-bottom: none;
+}
+
+.cart-item-mini img {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cart-item-mini p {
+  margin: 0;
+  font-size: 14px;
+  color: #e5e7eb;
+}
+
+.view-cart-btn {
+  margin-top: 12px;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: #22d3ee;
+  color: #020617;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.view-cart-btn:hover {
+  background: #06b6d4;
+}
+
+.empty-cart-text {
+  text-align: center;
+  color: #9ca3af;
+  padding: 14px 0;
+}
+
+
+/* ============================
+   Login Button
+============================ */
+.login-button {
+  background: #22d3ee;
+  color: #020617;
+  padding: 6px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-button:hover {
+  background: #06b6d4;
+}
+
+
+/* ============================
+   Icon Buttons (GLOBAL FIX)
+============================ */
+.navbar-icons button {
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-icons button:hover {
+  color: #22d3ee;
+}
+
+/* .cart-item-mini img {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+} */
+
+
+/* ============================
+   User Dropdown
+============================ */
+.user-menu {
+  position: relative;
+}
+
+.user-dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background: #020617;
+  border-radius: 12px;
+  width: 230px;
+  padding: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.user-info {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: white;
+}
+
+.user-email {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ============================
+   Admin Dashboard Link
+============================ */
+.admin-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #22d3ee;
+  font-weight: 600;
+}
+
+.admin-link:hover {
+  background: rgba(34, 211, 238, 0.15);
+}
+
+/* Logout */
+.logout-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: #ef4444;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background: rgba(239,68,68,0.15);
+}
+
+/* ============================
+   Mobile Menu
+============================ */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+/* ============================
+   Responsive
+============================ */
+@media (max-width: 1024px) {
+  .navbar-search {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #020617;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 9998;
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+}

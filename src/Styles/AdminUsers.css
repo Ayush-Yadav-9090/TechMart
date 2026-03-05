@@ -1,0 +1,146 @@
+/* ===================== ADMIN USERS WRAPPER ===================== */
+.admin-table {
+  padding: 24px;
+  background-color: #1f2937; /* dark gray background */
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  color: #f3f4f6; /* light text */
+}
+
+.admin-table h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #f3f4f6;
+}
+
+/* ===================== TABLE STYLING ===================== */
+.admin-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #374151; /* dark table background */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  table-layout: auto;
+}
+
+.admin-table thead {
+  background-color: #111827; /* dark header */
+}
+
+.admin-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f3f4f6;
+  letter-spacing: 0.5px;
+}
+
+.admin-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #e5e7eb;
+  border-bottom: 1px solid #6b7280;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+  background-color: #4b5563;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* ===================== EMPTY / LOADING STATES ===================== */
+.admin-table td[colspan],
+.admin-table p {
+  color: #9ca3af;
+  font-size: 14px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Tablets and small desktops */
+@media (max-width: 1024px) {
+  .admin-table th,
+  .admin-table td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+
+  .admin-table h2 {
+    font-size: 20px;
+  }
+
+  /* Horizontal scroll for table */
+  .admin-table table {
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+}
+
+/* Mobile: stack table rows as cards */
+@media (max-width: 768px) {
+  .admin-table table,
+  .admin-table thead,
+  .admin-table tr,
+  .admin-table th,
+  .admin-table td {
+    display: block;
+  }
+
+  .admin-table thead {
+    display: none;
+  }
+
+  .admin-table tr {
+    margin-bottom: 16px;
+    background: #020617;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .admin-table td {
+    padding-left: 50%;
+    position: relative;
+    text-align: left;
+  }
+
+  .admin-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    font-weight: 600;
+    font-size: 12px;
+    color: #94a3b8;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+  .admin-table h2 {
+    font-size: 18px;
+  }
+
+  .admin-table td::before {
+    left: 8px;
+    top: 8px;
+    font-size: 11px;
+  }
+}
+
+/* Ultra wide screens */
+@media (min-width: 1600px) {
+  .admin-table {
+    padding: 40px 60px;
+  }
+}
