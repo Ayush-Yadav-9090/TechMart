@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart, Heart } from "lucide-react";
 import { motion } from "framer-motion";
-import "../styles/ProductCard.css";
+import "../Styles/ProductCard.css";
 
 import { trackInteraction } from "../Utils/aiModel";
 

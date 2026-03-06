@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
-import '../styles/Contact.css';
+import '../Styles/Contact.css';
 
 /**
  * Contact Page Component

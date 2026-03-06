@@ -7,7 +7,7 @@ import AIAnalyzing from "../components/AIAnalyzing";
 import ProductCard from "../components/ProductCard";
 import { productsAPI, handleApiError } from "../services/api";
 
-import "../styles/Home.css";
+import "../Styles/Home.css";
 
 /**
  * Home Component

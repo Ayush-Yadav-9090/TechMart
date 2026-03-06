@@ -1,7 +1,7 @@
 
 import { NavLink, Outlet } from "react-router-dom";
 
-import "../styles/AdminLayout.css";
+import "../Styles/AdminLayout.css";
 const AdminLayout = ({ user, onLogout }) => {
 
   return (

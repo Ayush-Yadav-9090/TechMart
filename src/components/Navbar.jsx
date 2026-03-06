@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Search, ShoppingCart, Menu, X, User, LogOut, Sparkles, Shield } from "lucide-react";
-import "../styles/Navbar.css";
+import "../Styles/Navbar.css";
 import { useAuth } from "../services/AuthContext";
 
 const Navbar = ({ cart, cartCount, searchQuery, setSearchQuery }) => {

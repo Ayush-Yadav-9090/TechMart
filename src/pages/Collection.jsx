@@ -5,7 +5,7 @@ import AIAnalyzing from "../components/AIAnalyzing";
 
 import ProductCard from '../components/ProductCard';
 import { productsAPI, handleApiError } from '../services/api';
-import '../styles/Collections.css';
+import '../Styles/Collections.css';
 
 const Collections = ({ addToCart, searchQuery }) => {
   const [products, setProducts] = useState([]);

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Star, ThumbsUp, MessageSquare } from "lucide-react";
 
-import "../styles/Feedback.css";
+import "../Styles/Feedback.css";
 import { reviewsAPI } from "../services/api";
 
 const Feedback = ({ user }) => {
