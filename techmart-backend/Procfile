@@ -1,1 +1,1 @@
-web: gunicorn techmart.wsgi:application --bind 0.0.0.0:$PORT
+web: gunicorn techmart.wsgi --bind 0.0.0.0:$PORT
