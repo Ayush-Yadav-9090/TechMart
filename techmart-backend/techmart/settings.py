@@ -176,10 +176,11 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-x@2KQ7J$ZpA9Nq!wE4R9mP0Kc')
-DEBUG = os.getenv('DEBUG', 'True') == 'True'
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # ALLOWED_HOSTS = ['localhost','127.0.0.1']
-ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -239,17 +240,44 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'techmart.wsgi.application'
 
+# DATABASES = {
+#     # 'default': dj_database_url.config(default="postgresql://neondb_owner:npg_x1gERwt7jShm@ep-red-cloud-amou76ul-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require"),
+#    'default': dj_database_url.config(
+#         default=os.getenv("DATABASE_URL"),
+#         conn_max_age=600,
+#         ssl_require=True
+#     )
+#     #     'default': {
+#     #     'NAME': os.getenv('DB_NAME', ),
+#     #     'USER': os.getenv('DB_USER', ),
+#     #     'PASSWORD': os.getenv('DB_PASSWORD', ),
+#     #     'HOST': os.getenv('DB_HOST', ),
+#     #     'PORT': os.getenv('DB_PORT', ),
+#     #  }{
+#     # 'default': {
+#     #     'ENGINE': 'django.db.backends.postgresql',
+#     #     'NAME': os.getenv('DB_NAME'),
+#     #     'USER': os.getenv('DB_USER'),
+#     #     'PASSWORD': os.getenv('DB_PASSWORD'),
+#     #     'HOST': os.getenv('DB_HOST'),
+#     #     'PORT': os.getenv('DB_PORT', '5432'),
+#     #     'OPTIONS': {
+#     #         'sslmode': 'require',
+#     #     },
+#     # }
+# }
+
+
 DATABASES = {
-    'default': dj_database_url.config(default="postgresql://neondb_owner:npg_x1gERwt7jShm@ep-red-cloud-amou76ul-pooler.c-5.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require")
-           
-        # 'ENGINE': 'django.db.backends.mysql',
-        # 'NAME': os.getenv('DB_NAME', ),
-        # 'USER': os.getenv('DB_USER', ),
-        # 'PASSWORD': os.getenv('DB_PASSWORD', ),
-        # 'HOST': os.getenv('DB_HOST', ),
-        # 'PORT': os.getenv('DB_PORT', ),
-    
+    'default': dj_database_url.config(
+        default=os.getenv("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+        
+    
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
@@ -299,9 +327,9 @@ SIMPLE_JWT = {
     'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000" #your frontend url
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000" #your frontend url
+# ]
 CORS_ALLOW_ALL_ORIGINS = True # For development
 
 
