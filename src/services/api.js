@@ -7,13 +7,15 @@ import axios from 'axios';
 
 
 // API Base URL - Change this for production
-const API_BASE_URL = 'http://localhost:8000/api';
+// const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://techmart-web.onrender.com';
 // const API_BASE_URL = 'https://techmart-production-3870.up.railway.app';
 
 
 // Create axios instance
 const api = axios.create({
-  baseURL: "http://localhost:8000/api",
+  // baseURL: "http://localhost:8000/api",
+  baseURL: "https://techmart-web.onrender.com/api",
   // baseURL: "https://techmart-production-3870.up.railway.app",
   // headers: {
   //   'Content-Type': 'application/json',
@@ -23,7 +25,7 @@ const api = axios.create({
 
 
 const fixImageUrl = (url) =>
-  url?.startsWith('http') ? url : `http://127.0.0.1:8000${url}`;
+  url?.startsWith('http') ? url : `https://techmart-web.onrender.com${url}`;
 
 
 
@@ -54,7 +56,8 @@ api.interceptors.response.use(
 
       try {
         const res = await axios.post(
-          "http://localhost:8000/api/auth/token/refresh/",
+          'https://techmart-web.onrender.com/api/auth/token/refresh/',
+          // "http://localhost:8000/api/auth/token/refresh/",
           // "https://techmart-production-3870.up.railway.app/auth/token/refresh/",
           { refresh }
         );
