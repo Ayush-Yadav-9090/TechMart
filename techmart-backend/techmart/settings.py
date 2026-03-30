@@ -191,6 +191,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    
     # Third party
     
     'rest_framework_simplejwt',
