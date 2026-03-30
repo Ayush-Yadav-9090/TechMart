@@ -180,7 +180,8 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 # ALLOWED_HOSTS = ['localhost','127.0.0.1']
 # ALLOWED_HOSTS = ["*"]
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+# ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+ALLOWED_HOSTS = ['techmart-web.onrender.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
