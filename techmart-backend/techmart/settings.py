@@ -169,6 +169,10 @@ from pathlib import Path
 from datetime import timedelta
 from dotenv import load_dotenv
 import dj_database_url
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 # from rest_framework_simplejwt.views import TokenRefreshView
 
@@ -192,6 +196,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
     'rest_framework',
+    'cloudinary',
+    'cloudinary_storage',
     
     # Third party
     
@@ -221,6 +227,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dd9tt9yqp',
+    'API_KEY': '366645921665228',
+    'API_SECRET': os.getenv('CLOUD_SECRET') 
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 ROOT_URLCONF = 'techmart.urls'
 

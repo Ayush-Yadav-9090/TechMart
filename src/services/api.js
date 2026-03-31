@@ -363,12 +363,15 @@ export const adminAPI = {
 
 
   // createProduct: (data) =>api.post("/products/", data),
-   createProduct: (formData) =>
+   createProduct: (formData) =>{
+    const token = localStorage.getItem("token");
+
     api.post("/products/", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${token}`,
       },
-    }),
+    })},
 
 
   deleteProduct: (id) =>api.delete(`/products/${id}/`),
